@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { lessons } from '../content/catalog';
 import { useLearning } from '../context/LearningContext';
 import { Logo } from './Logo';
 import { SearchCommand } from './SearchCommand';
@@ -40,7 +41,10 @@ export function AppShell() {
   const pageTitle = useMemo(() => {
     const section = navigation.find((item) => item.to !== '/' && location.pathname.startsWith(item.to));
     if (section) return section.label;
-    if (location.pathname.startsWith('/lessons/')) return 'Lesson';
+    if (location.pathname.startsWith('/lessons/')) {
+      const lessonId = decodeURIComponent(location.pathname.slice('/lessons/'.length).split('/')[0]);
+      return lessons.find((lesson) => lesson.id === lessonId)?.title ?? 'Lesson';
+    }
     return location.pathname === '/' ? 'Dashboard' : 'Page not found';
   }, [location.pathname]);
 
