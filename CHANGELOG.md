@@ -2,6 +2,16 @@
 
 All notable project changes are documented here. Version labels follow the recoverable project milestones requested for the build.
 
+## v5-pink-couture-accessibility - 2026-07-13
+
+- Reimagined the interface as an original pink couture nursing academy with blush, rose, raspberry, plum, pearl, and champagne styling across light and dark themes.
+- Added an extensive, reduced-motion-aware animation system built around clinical pulse lines, stethoscope curves, medication motifs, nursing crosses, safety checks, and celebratory study microinteractions.
+- Reorganized the sidebar into clear learning groups and made ordinary first clicks navigate immediately, including active-route clicks that now reveal and focus the page instead of appearing unresponsive.
+- Added a complete mobile "More" menu, focus restoration, Escape handling, direct bottom navigation, and improved route-change focus behavior.
+- Added the LOLO Study Concierge with 13 one-click destinations so lessons, recall, tests, dosage math, clinical skills, downloads, planning, and progress are visible from the dashboard.
+- Refreshed the monogram, favicon, app icon, manifest colors, social card, and brand typography to match the new visual system without using third-party fashion-brand assets.
+- Stabilized the Windows test runner with a deterministic VM-thread pool; all 16 automated tests now run in the standard verification command.
+
 ## v4-production - 2026-07-13
 
 - Validated the production build locally and completed responsive navigation, route-level code splitting, SEO metadata, app manifest, favicon, social card, sitemap, and robots configuration.

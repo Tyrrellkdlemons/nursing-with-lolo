@@ -19,6 +19,8 @@ The base app is free of account requirements and API keys. Learner data stays in
 - 12 PDF lesson guides and 12 PowerPoint presentations
 - 5 ready-made study-plan templates
 - Dashboard, progress analytics, local notes, bookmarks, search, theme settings, and study timer
+- Original pink couture nursing design with animated EKG, stethoscope, medication, clinical-cross, and safety-check symbolism
+- One-click Study Concierge, grouped sidebar, direct mobile navigation, and route focus management for faster access
 - Practice modes for tutor, timed, exam, weak-topic, missed-question, random, and subject-focused study
 - Multiple-choice, multiple-response, ordered-response, matching, dosage, matrix, bow-tie, highlight, and case-study question support
 - Responsive layouts, keyboard access, visible focus, reduced-motion support, and print styles

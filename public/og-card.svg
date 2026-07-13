@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
-  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071c33"/><stop offset="1" stop-color="#123b66"/></linearGradient><linearGradient id="accent"><stop stop-color="#28d7c1"/><stop offset="1" stop-color="#6f78ff"/></linearGradient></defs>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#351025"/><stop offset=".55" stop-color="#741b48"/><stop offset="1" stop-color="#b7326d"/></linearGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd0e1"/><stop offset=".55" stop-color="#f1649f"/><stop offset="1" stop-color="#efc77d"/></linearGradient>
+    <radialGradient id="pearl"><stop stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="1020" cy="95" r="210" fill="#28d7c1" opacity=".12"/><circle cx="1040" cy="570" r="310" fill="#6f78ff" opacity=".14"/>
-  <g transform="translate(90 92)"><rect width="98" height="98" rx="28" fill="url(#accent)"/><path d="M25 24h17l31 52V24h17v55H72L42 29v50H25z" fill="#071c33"/></g>
-  <text x="90" y="270" font-family="Manrope,Arial,sans-serif" font-size="76" font-weight="800" fill="#fff">NURSING <tspan fill="#28d7c1">with LOLO</tspan></text>
-  <text x="94" y="350" font-family="DM Sans,Arial,sans-serif" font-size="38" fill="#cfe3f4">Master nursing one simple lesson at a time.</text>
-  <path d="M92 442h180l32-74 56 148 48-104 44 66h310" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1030" cy="80" r="260" fill="url(#pearl)"/><circle cx="1060" cy="570" r="330" fill="#ff8abb" opacity=".12"/>
+  <path d="M950 62v86M907 105h86M1100 194v50M1075 219h50" stroke="#f2cd83" stroke-width="10" stroke-linecap="round" opacity=".92"/>
+  <g transform="translate(90 88)"><rect width="104" height="104" rx="32" fill="url(#rose)"/><path d="M25 24h18l34 57V24h18v61H76L43 31v54H25z" fill="#501432"/><path d="M10 61h20l6-15 10 31 11-23 9 14h30" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="90" y="282" font-family="Cormorant Garamond,Georgia,serif" font-size="91" font-weight="700" fill="#fff8fc">NURSING <tspan fill="#ffc1d8" font-style="italic">with LOLO</tspan></text>
+  <text x="94" y="356" font-family="DM Sans,Arial,sans-serif" font-size="35" font-weight="500" fill="#ffe8f1">Your pink-powered nursing study academy.</text>
+  <path d="M92 455h181l32-76 57 151 50-108 46 68h330" fill="none" stroke="url(#rose)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(900 360)" fill="none" stroke="#ffd6e5" stroke-width="8" stroke-linecap="round"><path d="M50 0v118a54 54 0 0 0 108 0V70"/><circle cx="158" cy="56" r="17"/><path d="M0 0h100"/><circle cx="0" cy="0" r="12"/><circle cx="100" cy="0" r="12"/></g>
+  <text x="94" y="575" font-family="DM Sans,Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="5" fill="#f5cf86">LEARN • PRACTICE • REMEMBER</text>
 </svg>
-

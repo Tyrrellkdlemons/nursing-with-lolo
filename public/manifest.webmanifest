@@ -4,10 +4,9 @@
   "description": "A focused nursing study system with lessons, flashcards, practice tests, dosage math, and clinical skills.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f7fbff",
-  "theme_color": "#071c33",
+  "background_color": "#fff7fb",
+  "theme_color": "#5b1739",
   "icons": [
     { "src": "/app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
   ]
 }
-

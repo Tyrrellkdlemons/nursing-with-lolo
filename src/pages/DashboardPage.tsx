@@ -1,4 +1,28 @@
-import { ArrowRight, Award, BookOpen, BrainCircuit, CalendarClock, Check, ChevronRight, ClipboardCheck, Flame, Layers3, Play, ShieldCheck, Sparkles, Target } from 'lucide-react';
+import {
+  Activity,
+  ArrowRight,
+  Award,
+  BookOpen,
+  BrainCircuit,
+  Calculator,
+  CalendarClock,
+  Check,
+  ChevronRight,
+  ClipboardCheck,
+  FileDown,
+  Flame,
+  GraduationCap,
+  HeartPulse,
+  Layers3,
+  Library,
+  NotebookPen,
+  Play,
+  ShieldCheck,
+  Sparkles,
+  Stethoscope,
+  Target,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { flashcards, lessons, questions } from '../content/catalog';
@@ -6,6 +30,32 @@ import { quickSheets } from '../content/quickSheets';
 import { useLearning } from '../context/LearningContext';
 import { activityStreak, calculateAccuracy, studiedMinutesToday, subjectAccuracy } from '../lib/progress';
 import { Meter, ProgressRing } from '../components/ui';
+
+type StudyDestination = {
+  to: string;
+  label: string;
+  description: string;
+  icon: LucideIcon;
+  tone: 'rose' | 'plum' | 'lavender' | 'coral' | 'berry' | 'aqua';
+  badge: string;
+  featured?: boolean;
+};
+
+const studyDestinations: StudyDestination[] = [
+  { to: '/courses', label: 'Courses', description: 'See every nursing subject', icon: GraduationCap, tone: 'rose', badge: 'Start here', featured: true },
+  { to: '/library', label: 'Lesson library', description: 'Find a clear lesson fast', icon: Library, tone: 'plum', badge: `${lessons.length} lessons` },
+  { to: '/flashcards', label: 'Flashcards', description: 'Build rapid recall', icon: Layers3, tone: 'lavender', badge: `${flashcards.length} cards`, featured: true },
+  { to: '/practice', label: 'Practice tests', description: 'Answer with rationales', icon: ClipboardCheck, tone: 'coral', badge: `${questions.length} questions`, featured: true },
+  { to: '/nclex', label: 'NCLEX prep', description: 'Train clinical judgment', icon: ShieldCheck, tone: 'berry', badge: 'Exam ready' },
+  { to: '/dosage-lab', label: 'Dosage lab', description: 'Calculate step by step', icon: Calculator, tone: 'aqua', badge: '25 problems' },
+  { to: '/clinical-skills', label: 'Clinical skills', description: 'Practice safe checkoffs', icon: Stethoscope, tone: 'rose', badge: '20 guides' },
+  { to: '/quick-sheets', label: 'Quick sheets', description: 'Review at a glance', icon: HeartPulse, tone: 'coral', badge: `${quickSheets.length} sheets` },
+  { to: '/study-planner', label: 'Study planner', description: 'Make today manageable', icon: CalendarClock, tone: 'lavender', badge: 'Personal plan' },
+  { to: '/downloads', label: 'Downloads', description: 'Open PDFs and slides', icon: FileDown, tone: 'plum', badge: 'Study offline' },
+  { to: '/notebook', label: 'Notebook', description: 'Keep notes and bookmarks', icon: NotebookPen, tone: 'berry', badge: 'Saved locally' },
+  { to: '/progress', label: 'My progress', description: 'See what is improving', icon: Activity, tone: 'aqua', badge: 'Your trends' },
+  { to: '/ask-lolo', label: 'Ask LOLO', description: 'Get a simpler explanation', icon: BrainCircuit, tone: 'rose', badge: 'Study concierge' },
+];
 
 export default function DashboardPage() {
   const { state, recordQuestion } = useLearning();
@@ -53,6 +103,54 @@ export default function DashboardPage() {
           <div className="hero-visual__core"><span className="eyebrow">WEEKLY MASTERY</span><strong>{accuracy || 72}<small>%</small></strong><p>{state.attempts.length ? 'based on your answers' : 'starter target'}</p><svg viewBox="0 0 210 58" aria-hidden="true"><path d="M3 42 C22 28, 34 50, 54 31 S87 35, 104 20 S139 48, 158 24 S186 29,207 8" /><path className="hero-visual__area" d="M3 42 C22 28, 34 50, 54 31 S87 35, 104 20 S139 48, 158 24 S186 29,207 8 L207 58 L3 58z" /></svg></div>
           <div className="float-chip float-chip--top"><Flame /><span><strong>{streak || 1} day</strong> study streak</span></div>
           <div className="float-chip float-chip--bottom"><Award /><span><strong>{completed}</strong> lessons mastered</span></div>
+        </div>
+      </section>
+
+      <section className="study-concierge" aria-labelledby="study-concierge-title">
+        <div className="study-concierge__header">
+          <div>
+            <span className="hero-kicker"><Stethoscope size={15} /> LOLO STUDY CONCIERGE</span>
+            <h2 id="study-concierge-title">Everything you need, one click away.</h2>
+            <p>No menu hunting. Choose what your brain needs right now and go straight there.</p>
+          </div>
+          <div className="study-concierge__status" aria-label="Study system ready">
+            <span className="study-concierge__status-icon"><HeartPulse /></span>
+            <p><strong>Study system ready</strong><small>Lessons • recall • practice • progress</small></p>
+          </div>
+        </div>
+
+        <div className="clinical-pulse-divider" aria-hidden="true">
+          <span className="clinical-pulse-divider__cross">+</span>
+          <svg viewBox="0 0 720 32" preserveAspectRatio="none">
+            <path d="M0 17h170l18-1 10-13 14 27 16-20 13 7h172l12-1 9-8 13 17 13-10 13 2h217" />
+          </svg>
+          <span className="clinical-pulse-divider__label">ONE-TAP STUDY ACCESS</span>
+        </div>
+
+        <nav className="study-concierge__grid" aria-label="All study destinations">
+          {studyDestinations.map(({ to, label, description, icon: Icon, tone, badge, featured }) => (
+            <Link
+              key={to}
+              to={to}
+              className={`study-destination study-destination--${tone}${featured ? ' study-destination--featured' : ''}`}
+              aria-label={`${label}: ${description}`}
+            >
+              <span className="study-destination__symbol" aria-hidden="true"><Icon /></span>
+              <span className="study-destination__copy">
+                <small>{badge}</small>
+                <strong>{label}</strong>
+                <span>{description}</span>
+              </span>
+              <span className="study-destination__go" aria-hidden="true"><ArrowRight /></span>
+            </Link>
+          ))}
+        </nav>
+
+        <div className="clinical-symbol-row" aria-label="Nursing study priorities">
+          <span><ShieldCheck /> Medication safety first</span>
+          <span><HeartPulse /> Follow the clinical priority</span>
+          <span><Stethoscope /> Assess before you act</span>
+          <span><ClipboardCheck /> Document what matters</span>
         </div>
       </section>
 
@@ -115,4 +213,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-
