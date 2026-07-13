@@ -1,0 +1,30 @@
+# Private uploaded source material (contains account/course context)
+original-upload/
+
+# Dependencies and builds
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Netlify local state
+.netlify/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Temporary generation and QA files
+tmp/
+work/
+*.log
+npm-debug.log*
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
