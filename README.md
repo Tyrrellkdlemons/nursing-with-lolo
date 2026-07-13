@@ -195,7 +195,7 @@ Then manually verify:
 - intended production branch: `main` (select it when connecting the repository)
 - history fallback: all app routes rewrite to `/index.html`
 
-The checked-in canonical, Open Graph, robots, and sitemap metadata use the requested production address, `https://nursing-with-lolo.netlify.app/`. That address is release configuration, not a claim that a deployment already exists. If Netlify assigns a different site name or a custom domain is connected, update the production origin in `index.html`, `src/components/AppShell.tsx`, `public/robots.txt`, and `public/sitemap.xml` before the final production build.
+The production site is live at [nursing-with-lolo.netlify.app](https://nursing-with-lolo.netlify.app/), deployed automatically from the GitHub `main` branch at [Tyrrellkdlemons/nursing-with-lolo](https://github.com/Tyrrellkdlemons/nursing-with-lolo). The checked-in canonical, Open Graph, robots, and sitemap metadata use that same production origin. If a custom domain is connected later, update the production origin in `index.html`, `src/components/AppShell.tsx`, `public/robots.txt`, and `public/sitemap.xml` before the next production build.
 
 To deploy through the Netlify dashboard:
 

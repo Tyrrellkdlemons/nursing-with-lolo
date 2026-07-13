@@ -8,7 +8,7 @@ All notable project changes are documented here. Version labels follow the recov
 - Added Netlify build settings, SPA history fallback, security headers, and cache rules.
 - Added type, content, dosage, progress, and storage validation with production build checks.
 - Added comprehensive setup, content-authoring, artifact-generation, safety, GitHub, and deployment documentation.
-- Prepared the release tree for initialization on a `main` branch and GitHub-backed Netlify deployment without committed secrets or required runtime environment variables.
+- Published the release on the GitHub `main` branch and connected automatic production deploys at `https://nursing-with-lolo.netlify.app/`, without committed secrets or required runtime environment variables.
 
 ## v3-content-library - 2026-07-13
 
