@@ -1,0 +1,17 @@
+import { Download, ExternalLink, FileText, MonitorPlay, PackageOpen, Printer } from 'lucide-react';
+import { useState } from 'react';
+import { PageHeader } from '../components/ui';
+import { downloadResources } from '../content/resources';
+import { quickSheets } from '../content/quickSheets';
+
+export default function DownloadsPage() {
+  const [filter, setFilter] = useState<'all' | 'pdf' | 'pptx'>('all');
+  return <div><PageHeader eyebrow="DOWNLOAD LIBRARY" title="Study offline. Teach it back. Print the page." description="Every downloadable guide and deck is generated from the same structured, original learning content used in the site." actions={<a className="button button--primary" href="/downloads/nursing-with-lolo-complete-resource-pack.zip" download><PackageOpen /> Complete resource pack</a>} />
+    <section className="download-summary"><div><FileText /><p><strong>32</strong><span>PDF resources</span></p></div><div><MonitorPlay /><p><strong>{downloadResources.length}</strong><span>PowerPoint decks</span></p></div><div><Printer /><p><strong>{quickSheets.length}</strong><span>printable quick sheets</span></p></div><div><ExternalLink /><p><strong>2026</strong><span>review edition</span></p></div></section>
+    <div className="section-heading"><div><span className="eyebrow">SUBJECT PACKS</span><h2>Guides + presentation decks</h2></div><div className="segmented-control">{(['all', 'pdf', 'pptx'] as const).map((item) => <button key={item} className={filter === item ? 'is-active' : ''} onClick={() => setFilter(item)}>{item === 'all' ? 'All files' : item.toUpperCase()}</button>)}</div></div>
+    <div className="resource-table"><div className="resource-table__head"><span>Resource</span><span>Category</span><span>Reviewed</span><span>Files</span></div>{downloadResources.map((resource) => <article key={resource.id}><div className="resource-title"><span><FileText /></span><p><strong>{resource.title}</strong><small>{resource.description}</small></p></div><span className="subject-chip">{resource.category}</span><span>{resource.reviewedDate}</span><div>{filter !== 'pptx' && <a className="button button--secondary" href={resource.pdf} download><FileText /> PDF <small>{resource.pages}p</small></a>}{filter !== 'pdf' && <a className="button button--secondary" href={resource.pptx} download><MonitorPlay /> PPTX <small>{resource.slides}s</small></a>}</div></article>)}</div>
+    <section className="section-block"><div className="section-heading"><div><span className="eyebrow">QUICK-SHEET PDFs</span><h2>One-page recall tools</h2></div><a href="/downloads/nursing-with-lolo-quick-sheet-bundle.pdf" download>Download bundle <Download /></a></div><div className="download-chip-grid">{quickSheets.map((sheet) => <a key={sheet.id} href={sheet.downloadPath} download style={{ '--sheet-accent': sheet.accent } as React.CSSProperties}><FileText /><span><strong>{sheet.title}</strong><small>{sheet.category}</small></span><Download /></a>)}</div></section>
+    <section className="source-box"><strong>Educational resource note</strong><p>These files are independent study aids. They do not reproduce the private uploaded course archive, claim accreditation, guarantee an exam result, or replace current clinical references and institutional policy.</p></section>
+  </div>;
+}
+

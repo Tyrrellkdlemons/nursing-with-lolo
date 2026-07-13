@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071c33"/><stop offset="1" stop-color="#123b66"/></linearGradient><linearGradient id="accent"><stop stop-color="#28d7c1"/><stop offset="1" stop-color="#6f78ff"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="95" r="210" fill="#28d7c1" opacity=".12"/><circle cx="1040" cy="570" r="310" fill="#6f78ff" opacity=".14"/>
+  <g transform="translate(90 92)"><rect width="98" height="98" rx="28" fill="url(#accent)"/><path d="M25 24h17l31 52V24h17v55H72L42 29v50H25z" fill="#071c33"/></g>
+  <text x="90" y="270" font-family="Manrope,Arial,sans-serif" font-size="76" font-weight="800" fill="#fff">NURSING <tspan fill="#28d7c1">with LOLO</tspan></text>
+  <text x="94" y="350" font-family="DM Sans,Arial,sans-serif" font-size="38" fill="#cfe3f4">Master nursing one simple lesson at a time.</text>
+  <path d="M92 442h180l32-74 56 148 48-104 44 66h310" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
