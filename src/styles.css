@@ -238,6 +238,8 @@ label > input, label > select, label > textarea { width: 100%; display: block; m
 .command-results small { margin-top: 3px; color: var(--soft); font-size: .67rem; }
 .note-dialog { width: min(560px, 100%); padding: 25px; border-radius: 20px; background: var(--surface); box-shadow: var(--shadow-lg); }
 .note-dialog label { display: block; margin-top: 17px; }
+.privacy-note { display: flex; gap: 9px; align-items: flex-start; margin: 16px 0 0; padding: 11px 12px; border: 1px solid color-mix(in srgb, var(--amber-500) 45%, var(--line)); border-radius: 12px; background: color-mix(in srgb, var(--amber-500) 8%, var(--surface)); color: var(--text); font-size: .78rem; line-height: 1.45; }
+.privacy-note svg { flex: 0 0 auto; width: 17px; margin-top: 1px; color: var(--warning); }
 .note-dialog__actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 20px; }
 
 @media (max-width: 1180px) {

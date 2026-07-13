@@ -28,15 +28,31 @@ const navigation = [
   { to: '/settings', label: 'Settings', icon: Settings },
 ];
 
+// Keep this origin aligned with index.html, robots.txt, and sitemap.xml.
+const productionSiteOrigin = 'https://nursing-with-lolo.netlify.app';
+
 export function AppShell() {
   const { state, updateSettings } = useLearning();
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
-  const pageTitle = useMemo(() => navigation.find((item) => item.to !== '/' && location.pathname.startsWith(item.to))?.label ?? (location.pathname.startsWith('/lessons/') ? 'Lesson' : 'Dashboard'), [location.pathname]);
+  const pageTitle = useMemo(() => {
+    const section = navigation.find((item) => item.to !== '/' && location.pathname.startsWith(item.to));
+    if (section) return section.label;
+    if (location.pathname.startsWith('/lessons/')) return 'Lesson';
+    return location.pathname === '/' ? 'Dashboard' : 'Page not found';
+  }, [location.pathname]);
 
   useEffect(() => setMobileOpen(false), [location.pathname]);
+  useEffect(() => {
+    const canonicalUrl = new URL(location.pathname, productionSiteOrigin).toString();
+    document.title = `${pageTitle} | NURSING with LOLO`;
+    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', canonicalUrl);
+    document.querySelector<HTMLMetaElement>('meta[property="og:url"]')?.setAttribute('content', canonicalUrl);
+    document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.setAttribute('content', `${pageTitle} | NURSING with LOLO`);
+    document.querySelector<HTMLMetaElement>('meta[name="twitter:title"]')?.setAttribute('content', `${pageTitle} | NURSING with LOLO`);
+  }, [location.pathname, pageTitle]);
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); setSearchOpen(true); }

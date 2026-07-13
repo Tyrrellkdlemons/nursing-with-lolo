@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nursing-with-lolo.netlify.app/</loc></url>
   <url><loc>https://nursing-with-lolo.netlify.app/courses</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/library</loc></url>
   <url><loc>https://nursing-with-lolo.netlify.app/flashcards</loc></url>
   <url><loc>https://nursing-with-lolo.netlify.app/practice</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/nclex</loc></url>
   <url><loc>https://nursing-with-lolo.netlify.app/dosage-lab</loc></url>
   <url><loc>https://nursing-with-lolo.netlify.app/clinical-skills</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/quick-sheets</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/study-planner</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/downloads</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/ask-lolo</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-clinical-judgment</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-safety-fall-prevention</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-infection-control-isolation</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-vital-signs-pain</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-documentation-sbar</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-delegation-prioritization</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-mobility-positioning</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-nutrition-fluid-balance</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-medication-administration-safety</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/foundations-head-to-toe-assessment</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-11-cardiovascular-heart-failure</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-12-respiratory-oxygenation</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-13-diabetes-insulin-safety</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-14-renal-acute-kidney-injury</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-15-fluids-electrolytes</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-16-acid-base-abg</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-17-neurologic-stroke</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-18-gi-perioperative</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-19-shock-sepsis</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/adult-20-wounds-burns-pressure-injury</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/maternal-newborn-priorities</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/pediatric-growth-assessment-medication-safety</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/mental-health-communication-suicide-safety</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/pharmacology-high-yield-classes-monitoring</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/community-public-health-disaster-nursing</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/leadership-ethics-legal-scope</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/emergency-critical-care-first-priorities</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/2026-nclex-pn-clinical-judgment-prioritization</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/dosage-calculation-foundations-safe-rounding</loc></url>
+  <url><loc>https://nursing-with-lolo.netlify.app/lessons/cultural-humility-end-of-life-grief-care</loc></url>
 </urlset>
-

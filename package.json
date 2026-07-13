@@ -10,6 +10,7 @@
     "typecheck": "tsc -b --pretty false",
     "test": "vitest",
     "test:run": "vitest run",
+    "verify": "npm run verify:content && npm run test:run && npm run build",
     "export:artifacts": "tsx scripts/export_artifact_content.ts",
     "generate:pdf": "npm run export:artifacts && python scripts/generate_pdfs.py",
     "generate:pptx": "npm run export:artifacts && node scripts/generate_presentations.mjs",

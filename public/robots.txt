@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: /sitemap.xml
-
+Sitemap: https://nursing-with-lolo.netlify.app/sitemap.xml
